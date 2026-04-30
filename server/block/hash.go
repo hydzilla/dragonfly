@@ -94,6 +94,7 @@ const (
 	hashGravel
 	hashGrindstone
 	hashHayBale
+	hashHoneyBlock
 	hashHoneycomb
 	hashHopper
 	hashInvisibleBedrock
@@ -564,6 +565,10 @@ func (g Grindstone) Hash() (uint64, uint64) {
 
 func (h HayBale) Hash() (uint64, uint64) {
 	return hashHayBale, uint64(h.Axis)
+}
+
+func (HoneyBlock) Hash() (uint64, uint64) {
+	return hashHoneyBlock, 0
 }
 
 func (Honeycomb) Hash() (uint64, uint64) {
